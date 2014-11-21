@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(205, 235, 240);
+}
+
+header, footer {
+    background: rgba(65, 162, 255, 0.5);
+    box-shadow: .2em .2em .2em;
+    height: 10em;
+    margin: .2em auto;
+    overflow: hidden;
+    position: relative;
+    transition: all 1s ease;
+    width: 99%;
+}
+
+header h1 {
+    top: 1em;
+    left: 1em;
+    position: absolute;
+    z-index: 100;
+}
+
+header a {
+    color: #DDD;
+    text-decoration: none;
+}
+
+header div {
+    background: rgba(17, 118, 182, 0.80);
+    border-radius: 0 2em 2em 0;
+    height: 4em;
+    position: absolute;
+    top: 25%;
+    transition: all 1s ease;
+    width: 40em;
+}
+aside{
+    background: rgba(255, 143, 47, 0.50);
+    width: 0;
+}
+aside, #main {
+    box-shadow: .2em .2em .2em;
+    display: inline-block;
+    height: 40em;
+    margin: 0 .3em;
+    overflow: hidden;
+    transition: all 1s ease;
+    vertical-align: top;
+
+}
+footer{
+    background: cornflowerblue;
+    height: 0;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #EEEEEE;
+    text-align: center;
+    margin: .3em;
+    padding: 0;
+
+}
+
+footer a:link {
+    color: #ffc70f;
+}
+
+#main {
+    background: rgba(46, 255, 81, 0.50);
+    width: 0;
+}
