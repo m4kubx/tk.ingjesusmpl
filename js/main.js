@@ -27,8 +27,8 @@ function splash(){
         elem.css(estilos);
     },2000);
 
-    show("#main", 73, 2000);
-    show("aside",25, 2500)
+    show("#main", null, 2000);
+
     setTimeout(function() {
         var estilos = {
             "height": "4em"
@@ -38,10 +38,11 @@ function splash(){
 }
 
 function show(elem, val, tim) {
+    var val = val || (window.innerHeight-240);
     var elem = $(elem);
     setTimeout(function() {
         var estilos = {
-            "width": val + "%"
+            "height": val + "px"
         }
         elem.css(estilos);
     },tim);
