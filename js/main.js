@@ -1,8 +1,10 @@
 $(document).on("ready",function(){
     splash();
 
+});
 
-
+$(window).on("resize", function() {
+    resize();
 });
 
 function splash(){
@@ -28,12 +30,14 @@ function splash(){
     },2000);
 
     show("#main", null, 2000);
+    $("#main").css({"overflow":"auto"});
 
     setTimeout(function() {
         var estilos = {
             "height": "4em"
         }
         $("footer").css(estilos);
+        $("header h1, header h4").css({"display":"block"});
     },3000);
 }
 
@@ -47,4 +51,8 @@ function show(elem, val, tim) {
         elem.css(estilos);
     },tim);
 
+}
+
+function resize() {
+    show("#main", null, 0);
 }

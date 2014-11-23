@@ -18,15 +18,23 @@ header, footer {
     width: 99%;
 }
 
-header h1 {
-    top: 1em;
-    left: 1em;
+header h1, header h4 {
+    color: #DDD;
+    display: none;
+    left: 1.5em;
     position: absolute;
+    text-shadow: .1em .1em .1em #000;
+    top: 1em;
+    transition: all 1s ease;
     z-index: 100;
 }
 
+header h4 {
+    top: 5em;
+}
+
 header a {
-    color: #DDD;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -51,11 +59,63 @@ footer p {
     text-align: center;
     margin: .3em;
     padding: 0;
-
+    text-shadow: .1em .1em .1em #000;
 }
 
 footer a:link {
-    color: #ffc70f;
+    color: #00ff8f;
+}
+
+footer a:visited {
+    color: #c0a2ff;
+}
+
+footer a:hover {
+    color: rgb(22, 255, 165);
+    text-shadow: .2em .2em .1em rgba(0, 0, 0, .5);
+}
+nav {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+.button {
+    background: white;
+    border-radius: 1em;
+    box-shadow: .5em .5em 1em #000000;
+    display: inline-block;
+    height: 300px;
+    margin: 1%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 31%;
+}
+
+.button a {
+    background: rgba(0, 0, 0, 0.1);
+    display: block;
+    height: 100%;
+    position: absolute;
+    text-decoration: none;
+    width: 100%;
+}
+
+.button a:hover {
+    background: rgba(0,0,0,.5);
+}
+
+.button h2 {
+    color: #000000;
+    margin: 50% auto;
+    text-align: center;
+    text-shadow: .2em .2em .3em #222222;
+    transition: all .5s ease-in-out;
+    width: 90%;
+}
+.button a:hover h2 {
+    font-size: 2em;
 }
 
 #main {
@@ -71,19 +131,50 @@ footer a:link {
 }
 
 #right{
-    background: red;
     display: block;
     height: inherit;
     margin-left: 20em;
+    position: relative;
     width: 75   %;
 }
 #right img {
+    top: -40%;
+    position: absolute;
     width: 100%;
 }
 
-/*@media screen and (max-width: 600px){
-    aside, #main {
-        width: 100%;
-    }
+.resumen-curricular {
+    background-image: url("../img/resumen-curricular.gif");
+    background-size: 100%;
+}
+.contacto {
+    background-image: url("../img/contacto.png");
+    background-size: 100%;
+}
+.servicios {
+    background-image: url("../img/servicios.jpg");
+    background-size: 100%;
+}
 
-}*/
+@media screen and (max-width: 1080px){
+    #right img {
+        top: 0;
+        height: 200%;
+    }
+    .button {
+        background-size: 80%;
+        background-repeat: no-repeat;
+        width: 47.5%;
+    }
+}
+@media screen and (max-width: 620px){
+    #right {
+        margin-left: 0;
+    }
+    #right img {
+        height: 250%;
+    }
+    .button {
+            width: 100%;
+    }
+}
